@@ -11,4 +11,4 @@ Features:
 Python3 code is deprecated and archived. Please use go and improve it instead.
 
 Installation:
-`go get -u -v github.com/machinexa2/xssterminal`
+`go get -u -v github.com/machinexa2/XSSTerminal`
