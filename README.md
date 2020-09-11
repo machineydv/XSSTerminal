@@ -8,3 +8,7 @@ Features:
 3. Run and save xsst sessions for future use.
 4. Currently in development.
 
+Python3 code is deprecated and archived. Please use go and improve it instead.
+
+Installation:
+`go get -u -v github.com/machinexa2/xssterminal`
