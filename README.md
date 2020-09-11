@@ -1,4 +1,4 @@
-#XSS Terminal
+# XSS Terminal
 
 Develop your own xss payload for CTFs without typing the payload manually in browser or burp and finding that specific text in view-source or burp response: XSS MADE EASY with XSST  
 
