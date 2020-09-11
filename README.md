@@ -23,3 +23,4 @@ At last, i came up with the payload with console.log()
 1. Golang version is in development
 2. There are some other issue like which make it suitable for GET request only
 3. Bugs maybe there.
+4. Session saving and restoring from file hasnt been implemented in go version.
