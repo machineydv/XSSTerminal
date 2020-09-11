@@ -16,4 +16,6 @@ Python3 code is deprecated and archived. Please use go and improve it instead.
 ## Example Use:
 Using old python3 version, this is what xss development looks like. I was developing xss payload for CTF
 The argument was something like this:- `python3 XSSTerminalX.py --base-url http://ctfsite.com/?src= -p 'startingtext' -e 'Blocked'`
-![medevelopingxss](https://cdn.discordapp.com/attachments/741721459520438396/751493373587750962/unknown.png)
+![medevelopingxss](https://cdn.discordapp.com/attachments/741721459520438396/751493373587750962/unknown.png)  
+
+At last, i came up with the payload with console.log()
