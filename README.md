@@ -1,14 +1,18 @@
 # XSS Terminal
 
-Develop your own xss payload for CTFs and read world. Typing the payload manually in browser and finding that specific text in view-source is booring. This is the upgrade you need.
+Develop your own XSS payload for CTFs and read world smartly. Typing the payload manually in browser and finding that specific text in view-source is booring. This is the upgrade you need.
 
-Features:
+## Features:
 1. Easy to view response without lot of shits.
 2. Interactive testing whether `WAF` has blocked or not using error string.
 3. Run and save xsst sessions for future use.
-4. Currently in development.
+4. Go version is currently in development.
 
 Python3 code is deprecated and archived. Please use go and improve it instead.
 
-Installation:
+## Installation:
 `go get -u -v github.com/machinexa2/XSSTerminal`
+
+## Example Use:
+Using old python3 version, this is what xss development looks like. I was developing xss payload for CTF
+![medevelopingxss](https://cdn.discordapp.com/attachments/741721459520438396/751493373587750962/unknown.png)

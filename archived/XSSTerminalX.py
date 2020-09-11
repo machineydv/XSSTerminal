@@ -68,14 +68,17 @@ class XSST:
         return 'WAF Triggered'
 
     def make_xss(self):
-        self.xss_payload = self.xss_input(f"{ColorObj.information} XSS Payload :> ", self.xss_payload)
-        url = self.base_url + self.xss_payload
-        response = s.get(url).text
-        xss_list = response.split('\n')
-        if argv.error_string:
-            xssy = self.errorxss_check(xss_list)
-        elif argv.payload:
-            xssy = self.stringxss_check(xss_list)
+        try:
+            self.xss_payload = self.xss_input(f"{ColorObj.information} XSS Payload :> ", self.xss_payload)
+            url = self.base_url + self.xss_payload
+            response = s.get(url).text
+            xss_list = response.split('\n')
+            if argv.error_string:
+                xssy = self.errorxss_check(xss_list)
+            elif argv.payload:
+                xssy = self.stringxss_check(xss_list)
+        except Exception as E:
+            print(E)
         if not xssy == 'WAF Triggered':
             colorful_xss = self.return_xsscolor(self.xss_payload, [xssx for xssx in xssy.strip().split(self.xss_payload) if xssx])
             print(f"{ColorObj.good} {colorful_xss}")
@@ -95,4 +98,5 @@ if __name__ == "__main__":
         except Exception as E:
             print(E.__class__)
             print(E)
+            print("WHAT")
             exit()
