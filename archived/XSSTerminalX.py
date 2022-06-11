@@ -16,6 +16,7 @@ parser = ArgumentParser(description=colored("XSS Terminal", color='yellow'), epi
 parser.add_argument('-u', '--base-url', type=str, help="Base URL")
 parser.add_argument('-p', '--payload', type=str, help="Starting payload")
 parser.add_argument('-e', '--error-string', type=str, help="Error string (Leave empty for -p check)")
+parser.add_argument('-s', '--match-string', type=str, help="Match string from payload (for false WAF Triggers)")
 parser.add_argument('-o', '--output', type=str, help="Output file name")
 parser.add_argument('-r', '--resume', type=str, help="Filename to resume XSST session")
 parser.add_argument('-b', '--banner', action="store_true", help="Print banner and exit")
@@ -52,9 +53,14 @@ class XSST:
         return xss_payload
 
     def stringxss_check(self, xss_list) -> str:
-        for xssy in xss_list:
-            if urllib.parse.unquote_plus(urllib.parse.unquote_plus(self.xss_payload)) in urllib.parse.unquote_plus(xssy):
-                return xssy
+        if argv.match_string:
+            for xssy in xss_list:
+                if urllib.parse.unquote_plus(urllib.parse.unquote_plus(argv.match_string)) in urllib.parse.unquote_plus(xssy):
+                    return xssy
+        else:
+            for xssy in xss_list:
+                if urllib.parse.unquote_plus(urllib.parse.unquote_plus(self.xss_payload)) in urllib.parse.unquote_plus(xssy):
+                    return xssy
         return 'WAF Triggered'
 
     def errorxss_check(self, xss_list) -> str:
