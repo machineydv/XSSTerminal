@@ -1,0 +1,3 @@
+[console_scripts]
+XSSTerminal = XSSTerminal.XSSTerminal:main
+
