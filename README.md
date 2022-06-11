@@ -1,4 +1,6 @@
 # XSS Terminal
+- :warning: Before diving into my tools, read this: [NUKED](https://github.com/machineydv/machineydv/blob/master/NUKED.md)
+
 
 Develop your own XSS payload for CTFs and read world smartly. Typing the payload manually in browser and finding that specific text in view-source is booring. This is the upgrade you need.
 
